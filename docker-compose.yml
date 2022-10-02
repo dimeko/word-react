@@ -30,7 +30,8 @@ services:
   # Apache
   apache:
     build:
-        dockerfile: ./apache.Dockerfile
+      context: ./
+      dockerfile: ./apache.Dockerfile
     depends_on:
       - db
     ports:
