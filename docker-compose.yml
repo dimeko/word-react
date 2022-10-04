@@ -30,7 +30,7 @@ services:
   # Apache
   apache:
     build:
-      context: ./
+      context: .
       dockerfile: ./apache.Dockerfile
     depends_on:
       - db
