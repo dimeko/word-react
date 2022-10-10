@@ -34,6 +34,8 @@ services:
       dockerfile: ./apache.Dockerfile
     depends_on:
       - db
+    expose:
+      - "8080"
     ports:
       - '8080:80'
     restart: always
