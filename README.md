@@ -4,12 +4,13 @@ This is a basic template using for creating applications in php webservers with 
 
 ### Installation
 Create the first build of the webapp:
-```cd webapp && npm install && npm run build:dev```
+```cd webapp && npm install && npm run build```
 
 Spin up the server, the database and a phpMyAdmin instance:
-```docker-compose  up```
+```docker-compose up -d &&  docker exec -u root word-react_apache_1 chown -R www-data:www-data wordpress```
 
-<b>NOTE:</b> Do not forget to put the two domains inside your `/etc/hosts` file.
+<b>NOTES:</b></br> Do not forget to put the two domains inside your `/etc/hosts` file. </br>
+At the moment we set the wordpress folder with `www-data` owner in order to install plugins. Still figuring out a way to make it better </br>
 
 ### About wordpress API configuration
 Wordpress is not configured by default to work as a headless CMS and utilize only its API.
